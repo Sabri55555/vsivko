@@ -1,0 +1,48 @@
+using System;
+
+using System. Threading;
+
+
+namespace RaceCodition
+
+
+   class Akshay
+   
+   
+{
+  
+     int result = 0;
+    
+   void Work1() { result = 63; }
+   
+    void Work2() { result = 55; }
+    
+   void Work3() { result = 73; }
+    
+   static void Main(string[] args)
+   
+    {
+         
+      Akshay a = new Akshay();
+    
+      Thread worker1 = new Thread(a.Work1);
+      
+      Thread worker2 = new Thread(a.Work2);
+      
+      Thread worker3 = new Thread(a.Work3);
+  
+         worker1.start();
+        
+         worker2.start();
+      
+         worker3.start();
+    
+       Console.WriteLine(a.result);
+
+           Console.Read();
+     
+     }
+ 
+
+
+}
